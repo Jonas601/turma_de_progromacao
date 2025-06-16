@@ -10,13 +10,12 @@ function adicionaritem(lista){
     lista.push("novo item");
 }
 let itens =["item 1","item 2" ];
-adicionaritem(item);
-console.log(item);//["item 1","item 2","novo item"]
-
+adicionaritem(itens);
+console.log(itens);
 
 function saudacao(nome=visitante){
-    console.log (olá,$[nome]);
+    console.log (`olá,${nome}`);
     } 
-         saudacao();//olá , visitante!
-         saudacao("rodrigo");//olá, rodrigo!
+         saudacao();
+         saudacao("rodrigo");
     
