@@ -8,15 +8,39 @@
 
 </head>
 <body>
-    <button type = "button" onclick="alert('olá mundo')">clique aqui!</button>
+    <button type = "button" onclick="alert('olá mundo')">clique aqui!</button><br>
     <p id="paragrafo">olá!</p>
     <script>
-        function mfuncao(){
+        function mfuncao() {
             var x =
-            documento.getElementByld("paragrafo");
+            document.getElementById("paragrafo");
             x.innerHTML ="Hello!";
         }
     </script>
-    <button type="button" onclick="mfuncao();">translate</button>
+    <button type="button" onclick=" mfuncao();">translate</button>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <script>
+    function trocaimagem(){
+        var elemento = document.getElementById("myimage")
+        if (elemento.src.match("bulbon"))
+    { elemento.src = "pic_bulboff.gif";}
+    else{
+        elemento.src="pic_bulbon.gif";
+    }}
+    </script>
+    <p><img id="myimage" onclick="trocaimagem()"
+    src="pic_bulboff.gif" width="100" height="180"></p>
+    <p>clique na lâmpada para ligar/desligar a luz</p>
 </body>
 </html>
