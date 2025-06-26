@@ -26,9 +26,6 @@
         ul {
             margin-top: 20px;
         }
-        li {
-            margin-bottom: 6px;
-        }
     </style>
 </head>
 <body>
@@ -43,7 +40,7 @@
     <label>Curso:</label>
     <input type="text" id="curso"/>
 
-    <button onclick="cadastrarAluno()">Cadastrar Aluno</button>
+    <button onclick = "cadastrarAluno()">Cadastrar Aluno</button>
 
     <h2>Alunos Cadastrados</h2>
     <ul id="lista-alunos"></ul>
@@ -57,7 +54,12 @@
             const curso = document.getElementById("curso").value;
 
             if (nome && idade && curso) {
-                const aluno = { nome, idade, curso };
+                const aluno = {
+                     nome,
+                     idade, 
+                     curso 
+                    };
+
                 alunos.push(aluno);
 
                 exibirAlunos();
@@ -71,7 +73,7 @@
             const lista = document.getElementById("lista-alunos");
             lista.innerHTML = "";
 
-           for (let i = 0;i<alunos.lenght;i++){
+           for (let i = 0; i<alunos.lenght ; i++){
                 const aluno = aluno [i]
                 const item = document.createElement("li");
                 item.textContent = `alunon${i+1}: nome:${aluno.nome}, idade: ${aluno.idade} , Curso: ${aluno.curso}`;

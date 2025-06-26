@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
     <meta charset="UTF-8">
-    <title>busca imagem</title>
+    <title>selecionar foto de perfil</title>
     <head>
         <style>
             body {
                 font-family: arial,sans-serif;
-                padding: 50px;
-                background-color: black;
-                color: white;
-                text-align: center;
+                margin-top: 50px;
+                text-align: center
+            }
+            input[type = "file"] {
+                margin-top: 20px;
+            }
+            img {
+                display: block;
+                margin: 20px auto;
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 50%;
             }
 
 
@@ -17,9 +26,6 @@
 </head>
 <body>
 
-    <h1>Imagem carregada por URL</h1>
-
-    <img src="https://via.placeholder.com/300" alt="Imagem exemplo" width="300" height="200" />
 
 </body>
 </html>
