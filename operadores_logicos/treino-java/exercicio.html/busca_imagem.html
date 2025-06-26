@@ -19,6 +19,7 @@
                 height: 200px;
                 object-fit: cover;
                 border-radius: 50%;
+                border: 3px solid #444;
             }
 
 
@@ -26,6 +27,32 @@
 </head>
 <body>
 
+<h1>foto de perfil</h1>
 
+<input type="file" id="inputImagem" accept="image/*" />
+
+<img id="fotoPerfil" src="" alt="foto de perfil" style="display: none;"/>
+<script>
+const inputImagem = document.getElementById("inputImagem");
+
+const fotoPerfil = document.getElementById ("fotoPerfil");
+
+inputImagem.addEventListener("change",function (){
+    
+ const arquivo = this.files[0];
+  
+ if (arquivo) {
+    const leitor = new FileReader();
+    leitor.onload = function(e) {
+        fotoPerfil.src = e.target.result;
+        fotoPerfil.style.display = block;
+    };
+    
+    leitor.readAsDataURL(arquivo);
+
+};
+})
+
+</script>
 </body>
 </html>
