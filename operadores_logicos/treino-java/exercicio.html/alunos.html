@@ -59,6 +59,7 @@
             if (nome && idade && curso) {
                 const aluno = { nome, idade, curso };
                 alunos.push(aluno);
+
                 exibirAlunos();
                 limparCampos();
             } else {
@@ -71,11 +72,11 @@
             lista.innerHTML = "";
 
            for (let i = 0;i<alunos.lenght;i++){
-             const aluno = aluno [i]
+                const aluno = aluno [i]
                 const item = document.createElement("li");
                 item.textContent = `alunon${i+1}: nome:${aluno.nome}, idade: ${aluno.idade} , Curso: ${aluno.curso}`;
                 lista.appendChild(item);
-            };
+            }
         }
 
         function limparCampos() {
