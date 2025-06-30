@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
     <meta charset="UTF-8">
     <title>selecionar foto de perfil</title>
-    <head>
+
         <style>
             body {
                 font-family: arial,sans-serif;
@@ -31,27 +32,28 @@
 
 <input type="file" id="inputImagem" accept="image/*" />
 
-<img id="fotoPerfil" src="" alt="foto de perfil" style="display: none;"/>
+<img id="fotoPerfil" src="" alt="foto de perfil" style="display: none;" />
 <script>
 const inputImagem = document.getElementById("inputImagem");
 
 const fotoPerfil = document.getElementById ("fotoPerfil");
 
-inputImagem.addEventListener("change",function (){
+inputImagem.addEventListener("change", function (){
     
  const arquivo = this.files[0];
   
  if (arquivo) {
     const leitor = new FileReader();
-    leitor.onload = function(e) {
+
+    leitor.onload = function (e) {
         fotoPerfil.src = e.target.result;
-        fotoPerfil.style.display = block;
+        fotoPerfil.style.display = "block";
     };
     
     leitor.readAsDataURL(arquivo);
 
 };
-})
+});
 
 </script>
 </body>
